@@ -11,16 +11,27 @@ jobs:
             contents: read
             packages: write
         steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v3
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
               with:
                   node-version: '20.x'
-            - run: npm install
-            - run: npm run build
-            - run: |
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build the project
+              run: npm run build
+
+            - name: Configure npm for GitHub Packages
+              run: |
                   echo @chanakaHetti:https://npm.pkg.github.com/ > build/.npmrc
                   echo '//npm.pkg.github.com/:_authToken=${secrets.FREELANCE_MARKET_NPM_TOKEN}' >> build/.npmrc
-            - run: npm publish
+
+            - name: Publish to npm
+              run: npm publish
               working-directory: ./build
               env:
-                  FREELANCE_MARKET_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NODE_AUTH_TOKEN: ${{ secrets.FREELANCE_MARKET_NPM_TOKEN }}
