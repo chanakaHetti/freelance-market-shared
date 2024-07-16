@@ -19,7 +19,7 @@ jobs:
             - run: npm run build
             - run: |
                   echo @chanakaHetti:https://npm.pkg.github.com/ > build/.npmrc
-                  echo '//npm.pkg.github.com/:_authToken=${FREELANCE_MARKET_NPM_TOKEN}' >> build/.npmrc
+                  echo '//npm.pkg.github.com/:_authToken=${secrets.FREELANCE_MARKET_NPM_TOKEN}' >> build/.npmrc
             - run: npm publish
               working-directory: ./build
               env:
