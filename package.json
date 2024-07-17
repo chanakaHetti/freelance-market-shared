@@ -1,5 +1,5 @@
 {
-    "version": "0.0.10",
+    "version": "0.0.11",
     "license": "MIT",
     "types": "./src/index.d.ts",
     "main": "index.js",
@@ -30,7 +30,7 @@
         "url": "https://github.com/chanakaHetti/freelance-market-shared/issues"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@chanakaHetti"
+        "registry": "https://npm.pkg.github.com"
     },
     "files": [
         "build",
