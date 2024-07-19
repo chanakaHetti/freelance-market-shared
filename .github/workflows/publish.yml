@@ -28,9 +28,6 @@ jobs:
             - name: List build directory contents
               run: ls -R build
 
-            - name: List dist directory contents
-              run: ls -R dist
-
             - name: Configure npm for GitHub Packages
               run: |
                   echo //npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }} >> ~/.npmrc
