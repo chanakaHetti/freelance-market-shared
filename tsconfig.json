@@ -1,25 +1,25 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "importHelpers": true,
-    "jsx": "react-jsx",
-    "lib": ["dom", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "outDir": "build",
-    "rootDir": "src",
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2021",
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "pretty": true,
-    "resolveJsonModule": true
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "importHelpers": true,
+        "jsx": "react-jsx",
+        "lib": ["dom", "esnext"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmitOnError": true,
+        "outDir": "build",
+        "rootDir": "src",
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2021",
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "pretty": true,
+        "resolveJsonModule": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
 }
