@@ -30,6 +30,9 @@
     "bugs": {
         "url": "https://github.com/chanakaHetti/freelance-market-shared/issues"
     },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
     "files": [
         "build",
         "src"
