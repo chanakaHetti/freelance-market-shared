@@ -30,8 +30,11 @@ jobs:
                   echo //npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }} >> ~/.npmrc
                   npm config set registry https://npm.pkg.github.com/
 
+            - name: List files
+              run: ls -R
+
             - name: Publish to npm
               run: npm publish
-              working-directory: ./build
+              working-directory: ./dist
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

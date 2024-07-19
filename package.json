@@ -34,7 +34,7 @@
         "registry": "https://npm.pkg.github.com"
     },
     "files": [
-        "./build",
+        "build",
         "dist",
         "src"
     ],
