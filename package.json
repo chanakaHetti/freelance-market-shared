@@ -1,5 +1,5 @@
 {
-    "version": "0.0.20",
+    "version": "0.0.23",
     "license": "MIT",
     "private": false,
     "main": "./dist/index.js",
@@ -20,7 +20,7 @@
         "trailingComma": "es5"
     },
     "keywords": [],
-    "name": "@chanakaHetti/freelance-market-shared",
+    "name": "freelance-market-shared",
     "author": "Chanaka HA",
     "repository": {
         "type": "git",
@@ -29,9 +29,6 @@
     "homepage": "https://github.com/chanakaHetti/freelance-market-shared#readme",
     "bugs": {
         "url": "https://github.com/chanakaHetti/freelance-market-shared/issues"
-    },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
     },
     "files": [
         "build",
