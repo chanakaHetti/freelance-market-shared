@@ -25,16 +25,19 @@ jobs:
             - name: Build the project
               run: npm run build
 
+            - name: List build directory contents
+              run: ls -R build
+
+            - name: List dist directory contents
+              run: ls -R dist
+
             - name: Configure npm for GitHub Packages
               run: |
                   echo //npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }} >> ~/.npmrc
                   npm config set registry https://npm.pkg.github.com/
 
-            - name: List files
-              run: ls -R
-
             - name: Publish to npm
               run: npm publish
-              working-directory: ./dist
+              working-directory: ./build
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
