@@ -1,5 +1,5 @@
 {
-    "version": "0.0.18",
+    "version": "0.0.19",
     "license": "MIT",
     "types": "./src/index.d.ts",
     "description": "Helpers library for Feelance Market app",
