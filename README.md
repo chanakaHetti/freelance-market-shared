@@ -1,4 +1,4 @@
 ### Freelance Market Shared NPM package
 
 Install
-`npm install @chanakahetti/freelance-market-shared@0.0.4`
+`npm install @chanakaHetti/freelance-market-shared`
