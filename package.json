@@ -2,8 +2,7 @@
     "version": "0.0.30",
     "license": "MIT",
     "private": false,
-    "main": "./build/index.js",
-    "types": "./build/index.d.ts",
+    "types": "./index/index.d.ts",
     "description": "Helpers library for Feelance Market app",
     "engines": {
         "node": ">=20"
@@ -39,8 +38,8 @@
     ],
     "exports": {
         ".": {
-            "import": "./build/index.js",
-            "require": "./build/index.js"
+            "import": "./src/index.js",
+            "require": "./src/index.js"
         }
     },
     "dependencies": {
