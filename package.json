@@ -38,8 +38,8 @@
     ],
     "exports": {
         ".": {
-            "import": "./esm/index.js",
-            "require": "./esm/index.js"
+            "import": "./src/index.js",
+            "require": "./src/index.js"
         }
     },
     "dependencies": {
