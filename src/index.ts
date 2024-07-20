@@ -1,4 +1,4 @@
-const {
+export const {
     IAuthPayload,
     IAuthDocument,
     IAuthBuyerMessageDetails,
@@ -14,8 +14,8 @@ const {
     IAuthResponse,
     IAuthUser,
 } = require('./auth.interface');
-const { IBuyerDocument, IReduxBuyer } = require('./buyer.interface');
-const {
+export const { IBuyerDocument, IReduxBuyer } = require('./buyer.interface');
+export const {
     IConversationDocument,
     IMessageDocument,
     IMessageDetails,
@@ -24,7 +24,7 @@ const {
     IChatBuyerProps,
     IChatMessageProps,
 } = require('./chat.interface');
-const {
+export const {
     GigType,
     ICreateGig,
     ISellerGig,
@@ -36,7 +36,7 @@ const {
     IGigInfo,
     IGigTopProps,
 } = require('./gig.interface');
-const {
+export const {
     IOrderNotifcation,
     IOffer,
     IExtendedDelivery,
@@ -46,14 +46,14 @@ const {
     IOrderMessage,
     IOrderDocument,
 } = require('./order.interface');
-const {
+export const {
     IReviewMessageDetails,
     IRatingTypes,
     IRatingCategories,
     IRatingCategoryItem,
     IReviewDocument,
 } = require('./review.interface');
-const {
+export const {
     ISearchResult,
     IHitsTotal,
     IQueryList,
@@ -61,7 +61,7 @@ const {
     ITerm,
     IPaginateProps,
 } = require('./search.interface');
-const {
+export const {
     SellerType,
     ILanguage,
     IExperience,
@@ -69,15 +69,15 @@ const {
     ICertificate,
     ISellerDocument,
 } = require('./seller.interface');
-const { IEmailLocals } = require('./email.interface');
-const {
+export const { IEmailLocals } = require('./email.interface');
+export const {
     IErrorResponse,
     IError,
     ErrnoException,
 } = require('./error-handler-interface');
 
-const { uploads, videoUpload } = require('./cloudinary-upload');
-const {
+export const { uploads, videoUpload } = require('./cloudinary-upload');
+export const {
     CustomError,
     BadRequestError,
     NotFoundError,
@@ -85,93 +85,93 @@ const {
     FileTooLargeError,
     ServerError,
 } = require('./error-handler');
-const { verifyGatewayRequest } = require('./gateway-middleware');
-const { winstonLogger } = require('./logger');
-// const {
-//     firstLetterUppercase,
-//     lowerCase,
-//     toUpperCase,
-//     isEmail,
-//     isDataURL,
-// } = require('./helpers');
-
-module.exports = {
-    IAuthPayload,
-    IAuthDocument,
-    IAuthBuyerMessageDetails,
-    IEmailMessageDetails,
-    IAuth,
-    ISignUpPayload,
-    ISignInPayload,
-    IForgotPassword,
-    IResetPassword,
-    IReduxAuthPayload,
-    IReduxAddAuthUser,
-    IReduxLogout,
-    IAuthResponse,
-    IAuthUser,
-    IBuyerDocument,
-    IReduxBuyer,
-    IConversationDocument,
-    IMessageDocument,
-    IMessageDetails,
-    IChatBoxProps,
-    IChatSellerProps,
-    IChatBuyerProps,
-    IChatMessageProps,
-    GigType,
-    ICreateGig,
-    ISellerGig,
-    IGigContext,
-    IGigsProps,
-    IGigCardItems,
-    ISelectedBudget,
-    IGigViewReviewsProps,
-    IGigInfo,
-    IGigTopProps,
-    IOrderNotifcation,
-    IOffer,
-    IExtendedDelivery,
-    IDeliveredWork,
-    IOrderEvents,
-    IOrderReview,
-    IOrderMessage,
-    IOrderDocument,
-    IReviewMessageDetails,
-    IRatingTypes,
-    IRatingCategories,
-    IRatingCategoryItem,
-    IReviewDocument,
-    ISearchResult,
-    IHitsTotal,
-    IQueryList,
-    IQueryString,
-    ITerm,
-    IPaginateProps,
-    SellerType,
-    ILanguage,
-    IExperience,
-    IEducation,
-    ICertificate,
-    ISellerDocument,
-    IEmailLocals,
-    IErrorResponse,
-    IError,
-
-    uploads,
-    videoUpload,
-    ErrnoException,
-    CustomError,
-    BadRequestError,
-    NotFoundError,
-    NotAuthorizedError,
-    FileTooLargeError,
-    ServerError,
-    verifyGatewayRequest,
-    winstonLogger,
+export const { verifyGatewayRequest } = require('./gateway-middleware');
+export const { winstonLogger } = require('./logger');
+export const {
     firstLetterUppercase,
     lowerCase,
     toUpperCase,
     isEmail,
     isDataURL,
-};
+} = require('./helpers');
+
+// module.exports = {
+//     IAuthPayload,
+//     IAuthDocument,
+//     IAuthBuyerMessageDetails,
+//     IEmailMessageDetails,
+//     IAuth,
+//     ISignUpPayload,
+//     ISignInPayload,
+//     IForgotPassword,
+//     IResetPassword,
+//     IReduxAuthPayload,
+//     IReduxAddAuthUser,
+//     IReduxLogout,
+//     IAuthResponse,
+//     IAuthUser,
+//     IBuyerDocument,
+//     IReduxBuyer,
+//     IConversationDocument,
+//     IMessageDocument,
+//     IMessageDetails,
+//     IChatBoxProps,
+//     IChatSellerProps,
+//     IChatBuyerProps,
+//     IChatMessageProps,
+//     GigType,
+//     ICreateGig,
+//     ISellerGig,
+//     IGigContext,
+//     IGigsProps,
+//     IGigCardItems,
+//     ISelectedBudget,
+//     IGigViewReviewsProps,
+//     IGigInfo,
+//     IGigTopProps,
+//     IOrderNotifcation,
+//     IOffer,
+//     IExtendedDelivery,
+//     IDeliveredWork,
+//     IOrderEvents,
+//     IOrderReview,
+//     IOrderMessage,
+//     IOrderDocument,
+//     IReviewMessageDetails,
+//     IRatingTypes,
+//     IRatingCategories,
+//     IRatingCategoryItem,
+//     IReviewDocument,
+//     ISearchResult,
+//     IHitsTotal,
+//     IQueryList,
+//     IQueryString,
+//     ITerm,
+//     IPaginateProps,
+//     SellerType,
+//     ILanguage,
+//     IExperience,
+//     IEducation,
+//     ICertificate,
+//     ISellerDocument,
+//     IEmailLocals,
+//     IErrorResponse,
+//     IError,
+
+//     uploads,
+//     videoUpload,
+//     ErrnoException,
+//     CustomError,
+//     BadRequestError,
+//     NotFoundError,
+//     NotAuthorizedError,
+//     FileTooLargeError,
+//     ServerError,
+//     verifyGatewayRequest,
+//     winstonLogger,
+//     firstLetterUppercase,
+//     lowerCase,
+//     toUpperCase,
+//     isEmail,
+//     isDataURL,
+// };
