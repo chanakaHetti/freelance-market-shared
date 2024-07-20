@@ -3,7 +3,7 @@ import cloudinary, {
     UploadApiResponse,
 } from 'cloudinary';
 
-export function uploads(
+function uploads(
     file: string,
     public_id?: string,
     overwrite?: boolean,
@@ -29,7 +29,7 @@ export function uploads(
     });
 }
 
-export function videoUpload(
+function videoUpload(
     file: string,
     public_id?: string,
     overwrite?: boolean,
@@ -55,3 +55,8 @@ export function videoUpload(
         );
     });
 }
+
+module.exports = {
+    uploads,
+    videoUpload,
+};

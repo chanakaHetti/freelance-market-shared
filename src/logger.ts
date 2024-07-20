@@ -10,7 +10,7 @@ const esTransformer = (logData: LogData): TransformedData => {
     return ElasticsearchTransformer(logData);
 };
 
-export const winstonLogger = (
+const winstonLogger = (
     elasticsearchNode: string,
     name: string,
     level: string
@@ -46,4 +46,8 @@ export const winstonLogger = (
         ],
     });
     return logger;
+};
+
+module.exports = {
+    winstonLogger,
 };

@@ -1,6 +1,7 @@
 import JWT from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
-import { NotAuthorizedError } from './error-handler';
+
+const { NotAuthorizedError } = require('./error-handler');
 
 const tokens: string[] = [
     'auth',
@@ -13,7 +14,7 @@ const tokens: string[] = [
     'review',
 ];
 
-export function verifyGatewayRequest(
+function verifyGatewayRequest(
     req: Request,
     _res: Response,
     next: NextFunction
@@ -51,3 +52,7 @@ export function verifyGatewayRequest(
     }
     next();
 }
+
+module.exports = {
+    verifyGatewayRequest,
+};

@@ -1,4 +1,4 @@
-export {
+const {
     IAuthPayload,
     IAuthDocument,
     IAuthBuyerMessageDetails,
@@ -13,9 +13,9 @@ export {
     IReduxLogout,
     IAuthResponse,
     IAuthUser,
-} from './auth.interface';
-export { IBuyerDocument, IReduxBuyer } from './buyer.interface';
-export {
+} = require('./auth.interface');
+const { IBuyerDocument, IReduxBuyer } = require('./buyer.interface');
+const {
     IConversationDocument,
     IMessageDocument,
     IMessageDetails,
@@ -23,8 +23,8 @@ export {
     IChatSellerProps,
     IChatBuyerProps,
     IChatMessageProps,
-} from './chat.interface';
-export {
+} = require('./chat.interface');
+const {
     GigType,
     ICreateGig,
     ISellerGig,
@@ -35,8 +35,8 @@ export {
     IGigViewReviewsProps,
     IGigInfo,
     IGigTopProps,
-} from './gig.interface';
-export {
+} = require('./gig.interface');
+const {
     IOrderNotifcation,
     IOffer,
     IExtendedDelivery,
@@ -45,49 +45,133 @@ export {
     IOrderReview,
     IOrderMessage,
     IOrderDocument,
-} from './order.interface';
-export {
+} = require('./order.interface');
+const {
     IReviewMessageDetails,
     IRatingTypes,
     IRatingCategories,
     IRatingCategoryItem,
     IReviewDocument,
-} from './review.interface';
-export {
+} = require('./review.interface');
+const {
     ISearchResult,
     IHitsTotal,
     IQueryList,
     IQueryString,
     ITerm,
     IPaginateProps,
-} from './search.interface';
-export {
+} = require('./search.interface');
+const {
     SellerType,
     ILanguage,
     IExperience,
     IEducation,
     ICertificate,
     ISellerDocument,
-} from './seller.interface';
-export { IEmailLocals } from './email.interface';
-export { uploads, videoUpload } from './cloudinary-upload';
-export {
+} = require('./seller.interface');
+const { IEmailLocals } = require('./email.interface');
+const {
     IErrorResponse,
     IError,
+    ErrnoException,
+} = require('./error-handler-interface');
+
+const { uploads, videoUpload } = require('./cloudinary-upload');
+const {
     CustomError,
     BadRequestError,
     NotFoundError,
     NotAuthorizedError,
     FileTooLargeError,
     ServerError,
+} = require('./error-handler');
+const { verifyGatewayRequest } = require('./gateway-middleware');
+const { winstonLogger } = require('./logger');
+// const {
+//     firstLetterUppercase,
+//     lowerCase,
+//     toUpperCase,
+//     isEmail,
+//     isDataURL,
+// } = require('./helpers');
+
+module.exports = {
+    IAuthPayload,
+    IAuthDocument,
+    IAuthBuyerMessageDetails,
+    IEmailMessageDetails,
+    IAuth,
+    ISignUpPayload,
+    ISignInPayload,
+    IForgotPassword,
+    IResetPassword,
+    IReduxAuthPayload,
+    IReduxAddAuthUser,
+    IReduxLogout,
+    IAuthResponse,
+    IAuthUser,
+    IBuyerDocument,
+    IReduxBuyer,
+    IConversationDocument,
+    IMessageDocument,
+    IMessageDetails,
+    IChatBoxProps,
+    IChatSellerProps,
+    IChatBuyerProps,
+    IChatMessageProps,
+    GigType,
+    ICreateGig,
+    ISellerGig,
+    IGigContext,
+    IGigsProps,
+    IGigCardItems,
+    ISelectedBudget,
+    IGigViewReviewsProps,
+    IGigInfo,
+    IGigTopProps,
+    IOrderNotifcation,
+    IOffer,
+    IExtendedDelivery,
+    IDeliveredWork,
+    IOrderEvents,
+    IOrderReview,
+    IOrderMessage,
+    IOrderDocument,
+    IReviewMessageDetails,
+    IRatingTypes,
+    IRatingCategories,
+    IRatingCategoryItem,
+    IReviewDocument,
+    ISearchResult,
+    IHitsTotal,
+    IQueryList,
+    IQueryString,
+    ITerm,
+    IPaginateProps,
+    SellerType,
+    ILanguage,
+    IExperience,
+    IEducation,
+    ICertificate,
+    ISellerDocument,
+    IEmailLocals,
+    IErrorResponse,
+    IError,
+
+    uploads,
+    videoUpload,
     ErrnoException,
-} from './error-handler';
-export { verifyGatewayRequest } from './gateway-middleware';
-export { winstonLogger } from './logger';
-export {
+    CustomError,
+    BadRequestError,
+    NotFoundError,
+    NotAuthorizedError,
+    FileTooLargeError,
+    ServerError,
+    verifyGatewayRequest,
+    winstonLogger,
     firstLetterUppercase,
     lowerCase,
     toUpperCase,
     isEmail,
     isDataURL,
-} from './helpers';
+};

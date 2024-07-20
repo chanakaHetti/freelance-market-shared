@@ -1,21 +1,8 @@
 import { StatusCodes } from 'http-status-codes';
 
-export interface IErrorResponse {
-    message: string;
-    statusCode: number;
-    status: string;
-    comingFrom: string;
-    serializeErrors(): IError;
-}
+import { IError } from './error-handler-interface';
 
-export interface IError {
-    message: string;
-    statusCode: number;
-    status: string;
-    comingFrom: string;
-}
-
-export abstract class CustomError extends Error {
+abstract class CustomError extends Error {
     abstract statusCode: number;
     abstract status: string;
     comingFrom: string;
@@ -35,7 +22,7 @@ export abstract class CustomError extends Error {
     }
 }
 
-export class BadRequestError extends CustomError {
+class BadRequestError extends CustomError {
     statusCode = StatusCodes.BAD_REQUEST;
     status = 'error';
 
@@ -44,7 +31,7 @@ export class BadRequestError extends CustomError {
     }
 }
 
-export class NotFoundError extends CustomError {
+class NotFoundError extends CustomError {
     statusCode = StatusCodes.NOT_FOUND;
     status = 'error';
 
@@ -53,7 +40,7 @@ export class NotFoundError extends CustomError {
     }
 }
 
-export class NotAuthorizedError extends CustomError {
+class NotAuthorizedError extends CustomError {
     statusCode = StatusCodes.UNAUTHORIZED;
     status = 'error';
 
@@ -62,7 +49,7 @@ export class NotAuthorizedError extends CustomError {
     }
 }
 
-export class FileTooLargeError extends CustomError {
+class FileTooLargeError extends CustomError {
     statusCode = StatusCodes.REQUEST_TOO_LONG;
     status = 'error';
 
@@ -71,7 +58,7 @@ export class FileTooLargeError extends CustomError {
     }
 }
 
-export class ServerError extends CustomError {
+class ServerError extends CustomError {
     statusCode = StatusCodes.SERVICE_UNAVAILABLE;
     status = 'error';
 
@@ -80,10 +67,11 @@ export class ServerError extends CustomError {
     }
 }
 
-export interface ErrnoException extends Error {
-    errno?: number;
-    code?: string;
-    path?: string;
-    syscall?: string;
-    stack?: string;
-}
+module.exports = {
+    CustomError,
+    BadRequestError,
+    NotFoundError,
+    NotAuthorizedError,
+    FileTooLargeError,
+    ServerError,
+};
