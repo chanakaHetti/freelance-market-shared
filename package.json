@@ -1,8 +1,8 @@
 {
-    "version": "0.0.37",
+    "version": "0.0.38",
     "license": "MIT",
     "private": false,
-    "types": "./src/index.d.ts",
+    "types": "./src/index.js",
     "description": "Helpers library for Feelance Market app",
     "engines": {
         "node": ">=20"
