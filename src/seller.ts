@@ -1,5 +1,5 @@
 import { ObjectId } from 'mongoose';
-import { IRatingCategories } from './review.interface';
+import { IRatingCategories } from './review';
 
 // By extending ISellerDocument with the Record<string, any> you allow an object to contain other
 // string keys with any values along with those defined in the interface.

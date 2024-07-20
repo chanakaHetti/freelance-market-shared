@@ -1,6 +1,6 @@
 import { ObjectId } from 'mongoose';
-import { IRatingCategories, IReviewDocument } from './review.interface';
-import { ISellerDocument } from './seller.interface';
+import { IRatingCategories, IReviewDocument } from './review';
+import { ISellerDocument } from './seller';
 
 export type GigType = string | string[] | number | unknown | undefined;
 

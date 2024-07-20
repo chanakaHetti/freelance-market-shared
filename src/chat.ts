@@ -1,7 +1,7 @@
 import mongoose, { ObjectId } from 'mongoose';
-import { IOffer } from './order.interface';
-import { ISellerGig } from './gig.interface';
-import { ISellerDocument } from './seller.interface';
+import { IOffer } from './order';
+import { ISellerGig } from './gig';
+import { ISellerDocument } from './seller';
 
 export interface IConversationDocument extends Document {
     _id: mongoose.Types.ObjectId | string;
